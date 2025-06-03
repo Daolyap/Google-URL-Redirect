@@ -1,0 +1,73 @@
+/* static/style.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    padding: 0 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.markdown-body { /* Or whatever container you use */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+h1, h2, h3 {
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.3em;
+}
+
+h1 { font-size: 2.2em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.5em; }
+
+code {
+    background-color: #eee;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+pre {
+    background-color: #2d2d2d; /* Dark background for code blocks */
+    color: #f8f8f2;           /* Light text for code blocks */
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;         /* Allow horizontal scrolling for long lines */
+}
+
+pre code {
+    background-color: transparent; /* No background for code inside pre */
+    padding: 0;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}

@@ -1,0 +1,37 @@
+
+**3. Create an HTML template (`templates/view_markdown.html`):**
+
+This template will wrap our converted Markdown content.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Viewer</title>
+    <!-- Optional: Link to a CSS file for better styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Or use a CDN for a simple Markdown style, e.g., github-markdown-css -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css"> -->
+    <style>
+        /* Basic styling if not using an external CSS */
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Add a class to the body in the template if using github-markdown.css */
+        /* .markdown-body { box-sizing: border-box; min-width: 200px; max-width: 980px; margin: 0 auto; padding: 45px; } */
+    </style>
+</head>
+<body>
+    <!-- The 'safe' filter is important to render HTML tags correctly -->
+    <div class="markdown-body"> <!-- Add this class if using github-markdown.css -->
+        {{ content | safe }}
+    </div>
+</body>
+</html>
